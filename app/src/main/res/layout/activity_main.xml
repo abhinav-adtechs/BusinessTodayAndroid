@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="io.cse325.businesstoday.MainActivity">
+    tools:context="io.cse325.businesstoday.View.Feed.MainActivity">
 
     <FrameLayout
-        android:id="@+id/content"
+        android:id="@+id/frame_layout_activity_main_fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -17,7 +17,7 @@
     </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
+        android:id="@+id/navigaton_activity_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"

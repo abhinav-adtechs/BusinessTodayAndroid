@@ -1,4 +1,4 @@
-package io.cse325.businesstoday;
+package io.cse325.businesstoday.Controller;
 
 
 import android.app.Application;

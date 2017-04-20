@@ -1,4 +1,4 @@
-package io.cse325.businesstoday;
+package io.cse325.businesstoday.View.CustomViews;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,8 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        /*Setup theme here */
     }
 
 }
