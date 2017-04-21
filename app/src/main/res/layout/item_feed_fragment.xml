@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    app:cardCornerRadius="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        app:srcCompat="@mipmap/macbook_pro"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/iv_item_feed_fragment_product_image" />
+
+    <TextView
+        android:id="@+id/tv_item_feed_fragment_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginStart="23dp"
+        android:text="Macbook Pro 13' 256GB"
+        android:layout_alignTop="@+id/iv_item_feed_fragment_product_image"
+        android:layout_toEndOf="@+id/iv_item_feed_fragment_product_image" />
+
+    <TextView
+        android:id="@+id/tv_item_feed_fragment_company_name"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_item_feed_fragment_product_name"
+        android:layout_below="@+id/tv_item_feed_fragment_product_name"
+        android:text="Apple Inc." />
+
+    <TextView
+        android:id="@+id/tv_feed_fragment_product_description"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_item_feed_fragment_company_name"
+        android:layout_below="@+id/tv_item_feed_fragment_company_name"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,  "
+        />
+</RelativeLayout>
+
+</android.support.v7.widget.CardView>
