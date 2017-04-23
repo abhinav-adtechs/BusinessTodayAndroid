@@ -13,4 +13,7 @@
     
     <color name="colorAmberA700">#FFAB00</color>
 
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>

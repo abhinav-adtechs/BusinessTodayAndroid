@@ -63,7 +63,7 @@ public class MainActivity extends BaseActivity {
                     makeFragmentTransaction(nextFragment) ;
                     break;
 
-                case R.id.navigation_settings:
+                case R.id.navigation_logout:
                     nextFragment = new SettingsFragment() ;
                     actionBarMain.setTitle("Settings");
                     makeFragmentTransaction(nextFragment) ;
