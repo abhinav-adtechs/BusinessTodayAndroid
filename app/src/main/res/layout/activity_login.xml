@@ -2,7 +2,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorPrimary"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,31 +9,32 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="226dp"
         android:ems="10"
+        android:hint="Username"
         android:textAlignment="center"
         android:inputType="textPersonName"
-        android:text="Username"
-        android:textColor="@color/colorPrimaryText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:textColorHint="@color/colorPrimaryText"
-        android:textColor="@color/colorPrimaryText"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:textAlignment="center"
         android:inputType="textPassword"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="31dp"
         android:hint="Password"
         android:fontFamily=""
         android:layout_below="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/btn_activity_login_loginbtn"
@@ -43,10 +43,10 @@
         android:layout_below="@+id/editText2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="68dp"
-        android:padding="10dp"
-        android:textSize="30sp"
+        android:padding="15dp"
+        android:textSize="20sp"
         android:textColor="@color/colorPrimaryText"
-        android:background="@android:color/transparent"
+        android:background="@drawable/curved_rectangle"
         android:text="LOGIN" />
 
     <ImageView
@@ -62,10 +62,9 @@
         android:id="@+id/btn_activity_login_signupbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
         android:text="New to Business today? Sign up"
-        android:textColor="@color/colorWhite"
         android:background="@android:color/transparent"
-        android:layout_below="@+id/btn_activity_login_loginbtn"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="59dp" />
 </RelativeLayout>

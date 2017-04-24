@@ -35,7 +35,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     private void uiInit() {
 
         btnLogin = (Button) findViewById(R.id.btn_activity_login_loginbtn) ;
-
+        btnLogin.setOnClickListener(this);
+        findViewById(R.id.btn_activity_login_signupbtn).setOnClickListener(this);
 
     }
 
@@ -45,11 +46,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
             case R.id.btn_activity_login_loginbtn :
                 Intent intent = new Intent(this, MainActivity.class) ;
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY|Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
                 startActivity(intent);
+                finish();
                 break;
 
             case R.id.btn_activity_login_signupbtn:
-
+                Intent intent1 = new Intent(this, SignupActivity.class) ;
+                intent1.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY) ;
+                startActivity(intent1);
                 break;
 
         }
