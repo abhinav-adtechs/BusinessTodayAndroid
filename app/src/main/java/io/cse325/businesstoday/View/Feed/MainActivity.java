@@ -1,5 +1,6 @@
 package io.cse325.businesstoday.View.Feed;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import io.cse325.businesstoday.R;
+import io.cse325.businesstoday.View.Authentication.LoginActivity;
 import io.cse325.businesstoday.View.CustomViews.BaseActivity;
 import io.cse325.businesstoday.View.Dashboard.DashboardFragment;
 import io.cse325.businesstoday.View.Requests.RequestsFragment;
@@ -64,9 +66,7 @@ public class MainActivity extends BaseActivity {
                     break;
 
                 case R.id.navigation_logout:
-                    nextFragment = new SettingsFragment() ;
-                    actionBarMain.setTitle("Settings");
-                    makeFragmentTransaction(nextFragment) ;
+                    logoutFunc() ;
                     break;
             }
 
@@ -77,7 +77,10 @@ public class MainActivity extends BaseActivity {
 
     };
 
-
+    private void logoutFunc() {
+        startActivity(new Intent(this, LoginActivity.class));
+        finish();
+    }
 
 
     private void makeFragmentTransaction(Fragment nextFragment) {
