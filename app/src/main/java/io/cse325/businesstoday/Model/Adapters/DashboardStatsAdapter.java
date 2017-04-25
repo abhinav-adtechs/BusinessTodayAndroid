@@ -59,6 +59,7 @@ public class DashboardStatsAdapter extends RecyclerView.Adapter<DashboardStatsAd
         holder.pieChartStats.setDescription(description);
         holder.pieChartStats.setCenterText(String.valueOf(dashboardStats.get(position).getStatValue()));
         holder.pieChartStats.setDrawEntryLabels(false);
+        holder.pieChartStats.setDrawSliceText(false);
         holder.pieChartStats.getLegend().setEnabled(false);
 
         setData(2, dashboardStats.get(position).getStatTotalCapValue(), position, holder) ;
@@ -74,12 +75,18 @@ public class DashboardStatsAdapter extends RecyclerView.Adapter<DashboardStatsAd
         PieDataSet pieDataSet = new PieDataSet(pieEntries, dashboardStats.get(position).getStatTitle()) ;
 
         ArrayList<Integer> colors = new ArrayList<>() ;
-        colors.add(ResourcesCompat.getColor(mainActivity.getResources(), R.color.colorLightBlue500, null));
-        colors.add(ResourcesCompat.getColor(mainActivity.getResources(), R.color.colorGrey800, null));
+        if (position%2 == 0){
+            colors.add(ResourcesCompat.getColor(mainActivity.getResources(), R.color.colorAccentLight, null));
+            colors.add(ResourcesCompat.getColor(mainActivity.getResources(), R.color.colorGrey800, null));
+        }else {
+            colors.add(ResourcesCompat.getColor(mainActivity.getResources(), R.color.colorLightBlue500, null));
+            colors.add(ResourcesCompat.getColor(mainActivity.getResources(), R.color.colorGrey800, null));
+        }
 
         pieDataSet.setColors(colors);
 
         PieData pieData = new PieData(pieDataSet) ;
+        pieData.setDrawValues(false);
 
         holder.pieChartStats.setData(pieData);
         holder.pieChartStats.invalidate();

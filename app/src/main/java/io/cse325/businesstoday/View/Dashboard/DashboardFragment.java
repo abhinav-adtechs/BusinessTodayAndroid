@@ -61,10 +61,13 @@ public class DashboardFragment extends Fragment {
 
         DashboardStats dashboardStats;
 
-        for (int i = 0; i < 10; i++) {
-            dashboardStats = new DashboardStats("Active Users", 750, 1000) ;
-            statsArrayList.add(dashboardStats);
-        }
+        dashboardStats = new DashboardStats("Current Deals", 750, 1000) ;
+        statsArrayList.add(dashboardStats);
+        dashboardStats = new DashboardStats("Pending Deals", 5, 10) ;
+        statsArrayList.add(dashboardStats);
+        dashboardStats = new DashboardStats("Sales", 60, 100) ;
+        statsArrayList.add(dashboardStats);
+
         statsAdapter.notifyDataSetChanged();
 
     }
