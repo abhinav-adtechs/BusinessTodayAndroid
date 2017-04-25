@@ -12,8 +12,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import io.cse325.businesstoday.Model.Adapters.DashboardProductsAdapter;
 import io.cse325.businesstoday.Model.Adapters.DashboardStatsAdapter;
 import io.cse325.businesstoday.Model.Pojos.DashboardStats;
+import io.cse325.businesstoday.Model.Pojos.Products;
 import io.cse325.businesstoday.R;
 import io.cse325.businesstoday.View.Feed.MainActivity;
 
@@ -23,6 +25,11 @@ public class DashboardFragment extends Fragment {
     private RecyclerView rvStats ;
     private ArrayList<DashboardStats> statsArrayList = new ArrayList<>();
     private DashboardStatsAdapter statsAdapter ;
+
+    private RecyclerView rvProducts;
+    private ArrayList<Products> productsArrayList = new ArrayList<>() ;
+    private DashboardProductsAdapter dashboardProductsAdapter ;
+
 
     private MainActivity mainActivity ;
 
@@ -44,6 +51,14 @@ public class DashboardFragment extends Fragment {
 
     private void uiInit(View view) {
         rvStats = (RecyclerView) view.findViewById(R.id.rv_fragment_dashboard_main_stats) ;
+        rvProducts = (RecyclerView) view.findViewById(R.id.rv_fragment_requests_main_recyclerview_products) ;
+
+        initializeStats() ;
+        initializeProducts() ;
+
+    }
+
+    private void initializeStats() {
 
         statsAdapter = new DashboardStatsAdapter(statsArrayList, mainActivity) ;
 
@@ -53,11 +68,35 @@ public class DashboardFragment extends Fragment {
         rvStats.setItemAnimator(new DefaultItemAnimator());
         rvStats.setAdapter(statsAdapter);
 
-        addDataToArray();
+        addStatsDataToArray();
+    }
+
+    private void initializeProducts() {
+
+        dashboardProductsAdapter = new DashboardProductsAdapter(productsArrayList, mainActivity) ;
+
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(mainActivity, LinearLayoutManager.HORIZONTAL, false);
+        rvProducts.setLayoutManager(layoutManager);
+        rvProducts.setItemAnimator(new DefaultItemAnimator());
+        rvProducts.setAdapter(dashboardProductsAdapter);
+
+        addProductDataToArray();
+    }
+
+    private void addProductDataToArray() {
+        Products products ;
+
+        for (int i = 0; i < 7; i++) {
+            products = new Products("Macbook Pro 13'", i) ;
+            productsArrayList.add(products);
+        }
+
+        dashboardProductsAdapter.notifyDataSetChanged();
     }
 
 
-    void addDataToArray(){
+    void addStatsDataToArray(){
 
         DashboardStats dashboardStats;
 
