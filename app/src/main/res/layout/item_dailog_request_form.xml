@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="200dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -30,9 +31,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        android:layout_alignEnd="@+id/tv_item_dialog_request_form_count"
-        android:layout_alignTop="@+id/tv_item_dialog_request_form_count"
-        android:layout_marginEnd="47dp"
-        android:layout_marginTop="10dp"
-        android:text="Enter item count: " />
+        android:layout_marginTop="20dp"
+        android:text="Enter item count: "
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
