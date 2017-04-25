@@ -12,7 +12,7 @@
 
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tv_item_requests_individual_company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -24,11 +24,11 @@
             android:text="Samsung Inc" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tv_item_requests_idividual_request_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView2"
-            android:layout_below="@+id/textView2"
+            android:layout_alignStart="@+id/tv_item_requests_individual_company"
+            android:layout_below="@+id/tv_item_requests_individual_company"
             android:layout_marginTop="14dp"
             android:layout_marginEnd="10dp"
             android:text="Samsung Inc has requested 10 units of the product Macbook Pro 13' at amount 75000 " />
@@ -36,24 +36,24 @@
 
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_item_requests_individual_reject"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:text="REJECT"
             android:textColor="@color/cpb_red_dark"
             android:textStyle="bold"
-            android:layout_below="@+id/textView3"
+            android:layout_below="@+id/tv_item_requests_idividual_request_string"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="22dp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_item_requests_individual_accept"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/button2"
-            android:layout_alignBottom="@+id/button2"
-            android:layout_toStartOf="@+id/button2"
+            android:layout_alignBaseline="@+id/btn_item_requests_individual_reject"
+            android:layout_alignBottom="@+id/btn_item_requests_individual_reject"
+            android:layout_toStartOf="@+id/btn_item_requests_individual_reject"
             android:background="@android:color/transparent"
             android:text="Accept"
             android:textColor="@color/cpb_green_dark"
